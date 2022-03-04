@@ -2,7 +2,6 @@ import os
 import shutil
 import sys
 import threading
-from urllib.robotparser import RobotFileParser
 import zipfile
 from opencc import OpenCC
 from tkinter import *
@@ -19,7 +18,7 @@ def t2s(epub):
 
     # 用OpenCC的命令行处理文件的转换
     for path in getContents(s_folder):
-        CCcmd = 'python -m opencc -c t2s -i ' + path + ' -o ' + path
+        CCcmd = 'python -m opencc -c t2s -i "' + path + '" -o "' + path + '"'
         os.system(CCcmd)
 
     pack(s_file, os.path.join(os.getcwd(), s_folder))
@@ -35,7 +34,7 @@ def s2t(epub):
 
     # 用OpenCC的命令行处理文件的转换
     for path in getContents(t_folder):
-        CCcmd = 'python -m opencc -c s2t -i ' + path + ' -o ' + path
+        CCcmd = 'python -m opencc -c t2s -i "' + path + '" -o "' + path + '"'
         os.system(CCcmd)
 
     pack(t_file, os.path.join(os.getcwd(), t_folder))
