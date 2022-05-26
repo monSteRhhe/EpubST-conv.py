@@ -1,3 +1,5 @@
+<div align="center"><img src="./docs/banner.webp"/></div>
+
 # EpubST-conv.py
 
 ## 碎碎念
@@ -6,7 +8,9 @@
 
 拿py3摸的简单的epub简繁转换，写的很捞，就写着练练手~~（玩玩）~~。
 
-~~不知道会不会用出问题~~
+~~不知道用着会不会出问题（~~
+
+*图片字体：Sevarozi Free Font*
 
 
 
